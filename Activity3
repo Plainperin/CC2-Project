@@ -1,0 +1,33 @@
+package activity3;
+import java.util.Scanner;
+public class Activity3 {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int element;
+        System.out.println("Enter number of elements: ");
+        element = scan.nextInt();
+        int [] num1 = new int[element];
+        System.out.println("Enter " + element + " integer elements: ");
+        for (int i = 0; i < element; i++) 
+		num1[i] = scan.nextInt();
+        
+        int [] num = {3,5,7,13,2,3,9};
+        
+        display(num1);
+    }
+    static int getFib(int n){
+        if (n <= 1){
+            return n;
+        }else{
+            return getFib(n - 1) + getFib(n - 2);
+        }
+    }
+    static void display(int [] a){
+        
+                for (int x = 0; x < a.length; x++){
+                    System.out.println("f(" + a[x] + ")" + " = " + getFib(a[x]));
+                }
+                System.out.print("\n");
+    }       
+}
